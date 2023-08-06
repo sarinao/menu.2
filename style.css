@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: rgb(239, 236, 231);
+   /* background-color: rgb(239, 236, 231);*/
 }
 header{
     top: 0;
@@ -23,7 +23,7 @@ header{
     justify-content: space-between;
     display: flex;
     padding: 0 9%;
-    box-shadow: 0 0.5rem 0.5rem rgb(72, 70, 70);
+    box-shadow: 0 0.5rem 0.5rem rgb(106, 104, 104);
 }
 .logo-header{
     position: relative;
@@ -52,3 +52,43 @@ header{
 #nav ul li a:hover{
     color: black;
 }
+.toggel-btn{
+    position: relative;
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(239, 236, 231);
+    display: none;
+}
+
+/*responsiv */
+
+@media (max-width: 922px){
+    header{
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 770px){
+    .toggel-btn{
+        display: block;
+    }
+    .toggel-btn.active::before{
+        content: '/f00d';
+    }
+
+    #nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgb(135, 103, 199);
+        width: 100%;
+        padding: 0 5%;
+        box-shadow:0 0.5rem 0.5rem rgb(126, 122, 122);;
+    }
+    #nav ul li{
+        display: block;
+    }
+    #nav ul li a{
+        margin: 1.5rem 0;
+    }
+} 
